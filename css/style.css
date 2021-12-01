@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans',sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: rgb(0, 150, 136);
+    background: linear-gradient(180deg, rgba(0, 150, 136, 1) 18% , rgba(215, 219, 214, 1) 18%);
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+/* CONTAINER COLONNE  */
+
+.container-col {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;
+    background-color: #fff;
+    align-self: center;
+    display: flex;
+    box-shadow: 0 0 6px #ccc;
+}
+
+.col-sx,
+.col-dx {
+    height: 100%;
+}
+
+.col-sx {
+    width: 30%;
+    background-color:#fff;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/**colonna sinistra **/
+.header-sx{
+    background-color: #EAEAEA;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    border-right: 1px solid grey;
+}
+
+.account-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headnm{
+    display: flex;
+    align-items: center;
+    width: 85%;
+}
+
+.headnm img{
+    width: 10%;
+    border-radius: 50%;
+    line-height: 100%;
+}
+
+.headnm img, span{
+    margin-left: 8px;
+}
+
+.headnm span,{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.icon{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px;
+    color: rgba(0,  0, 0, 0.3);
+}
+
+.notifications{
+    height: 8%;
+    background-color: #8EDAFC;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #F2FBFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 14px;
+}
+
+.circle i{
+    color: #8EDAFC;
+}
+
+.notifications h4{
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.notifications span{
+    margin-left: 10px;
+    font-size: 12px;
+    color: #4F7485;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.contacts{
+    display: flex;
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+
+.contacts li{
+    border-top: 1px solid #F5F5F5;
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+}
+.contacts ul{
+    list-style: none;
+    
+}
+
+.contacts span{
+    margin-left: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+
+.contacts img{
+    width: 10%;
+    border-radius: 50%;
+    line-height: 100%;
+    margin-left: 10px;
+}
+
+.contacts li:hover{
+    background-color:#E9EBEB ;
+}
+
+/** colonna destra **/
+.col-dx {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.header-dx{
+    background-color: #EAEAEA;
+    width: 100%;
+    height: 8%;
+    display: flex;
+}
+
+.messages-container{
+    flex-grow: 1;
+    overflow-y: scroll;
+    background-image: url('../img/mine.jpg');
+    padding: 40px;
+}
+
+.send-message{
+    height: 80px;
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*message*/
+.message{
+    display: flex;
+}
+
+.message-text{
+    max-width: 50%;
+    padding: 10px 22px 10px 10px;
+    border-radius: 10px;
+}
+
+.message-text.sent{
+    background-color: #d5f9ba;
+    margin-left: auto;
+}
+
+.message-text.received{
+    background-color: white;
+}
+
+.messagedate{
+    font-size: 10px;
+    color:#888;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.account-info2{
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.account-info2 img{
+    width: 10%;
+    border-radius: 50%;
+    line-height: 100%;
+}
+
+.account-info2 img, span{
+    margin-left: 8px;
+}
+
+.account-info2 span,{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.header-dx .icon{
+    width: 10%;
+}
+
+.send-message input{
+    min-width: 75%;
+    height: 75%;
+    border-radius: 10px;
+    border: none;
+}
+
+.send-message i{
+    font-size: 22px;
+}
+
+#mic{
+    margin-right: 60px;
+}
+
+#reverse{
+    margin-left: 60px;
+}
+
+
+
