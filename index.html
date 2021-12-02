@@ -38,11 +38,12 @@
                         
                     </div>
                     <div class="searchbar">
+                        <i class="fas fa-search"></i>
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <div class="contacts">
                         <ul>
-                            <li class="contact" v-for="contact in contacts">
+                            <li class="contact" v-for="(contact,index) in contacts" @click="changeContact(index)">
                                 <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                 <span>{{contact.name}}</span>
                             </li>
@@ -52,7 +53,8 @@
                 <div class="col-dx left">
                     <div class="header-dx">
                         <div class="account-info2">
-
+                            <img :src="`./img/avatar${contacts[currentContact].avatar}.jpg`" alt="">
+                            <span>{{contacts[currentContact].name}}</span>
                         </div>
                         <div class="icon">
                             <i class="fas fa-search"></i>
@@ -64,16 +66,10 @@
 
                     </div>
                     <div class="messages-container">
-                        <div class="message">
-                            <div class="message-text sent">
-                                <div class="messagecontent">Hai portato a spasso il cane?</div>
-                                <div class="messagedate">10/01/2021  14:33</div>
-                            </div>
-                        </div>
-                        <div class="message">
-                            <div class="message-text received">
-                                <div class="messagecontent">No purtroppo non ho avuto tempo oggi!!</div>
-                                <div class="messagedate">10/01/2021  15:11</div>
+                        <div class="message" v-for="mess in contacts[currentContact].messages">
+                            <div class="message-text" :class="mess.status">
+                                <div class="messagecontent">{{mess.message}}</div>
+                                <div class="messagedate">{{mess.date}}</div>
                             </div>
                         </div>
                     </div>

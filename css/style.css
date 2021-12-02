@@ -178,6 +178,24 @@ main {
     
 }
 
+.searchbar{
+    position:relative;
+    display: flex;
+}
+
+.searchbar input{
+    height: 35px;
+    width: 98%;
+    margin-left: 4px;
+}
+
+.searchbar i{
+    position: absolute;
+    right: 15px;
+    top: 9px;
+    color: rgba(0,  0, 0, 0.3);
+}
+
 .header-dx{
     background-color: #EAEAEA;
     width: 100%;
@@ -203,6 +221,7 @@ main {
 /*message*/
 .message{
     display: flex;
+    margin-bottom: 25px;
 }
 
 .message-text{
@@ -269,6 +288,13 @@ main {
 
 #reverse{
     margin-left: 60px;
+}
+
+.account-info2 img{
+    width: 6%;
+    border-radius: 50%;
+    line-height: 100%;
+    margin-left: 10px;
 }
 
 
