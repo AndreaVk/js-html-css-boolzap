@@ -187,6 +187,8 @@ main {
     height: 35px;
     width: 98%;
     margin-left: 4px;
+    border: none;
+    cursor: pointer;
 }
 
 .searchbar i{
@@ -194,6 +196,7 @@ main {
     right: 15px;
     top: 9px;
     color: rgba(0,  0, 0, 0.3);
+    cursor: pointer;
 }
 
 .header-dx{
@@ -269,6 +272,7 @@ main {
 
 .header-dx .icon{
     width: 10%;
+    cursor: pointer;
 }
 
 .send-message input{
@@ -276,14 +280,17 @@ main {
     height: 75%;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 
 .send-message i{
     font-size: 22px;
+    cursor: pointer;
 }
 
 #mic{
     margin-right: 60px;
+    cursor: pointer;
 }
 
 #reverse{
@@ -296,6 +303,7 @@ main {
     line-height: 100%;
     margin-left: 10px;
 }
+
 
 
 

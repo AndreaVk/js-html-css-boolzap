@@ -40,7 +40,7 @@ const app = new Vue({
                 {
                     date: '20/03/2020 16:35:00',
                     message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                    status: 'received'
+                    status: 'sent'
                 }
                 ],
             },
@@ -66,7 +66,7 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Luisa',
+                name: 'Massimo',
                 avatar: '_4',
                 visible: true,
                 messages: [{
@@ -83,15 +83,22 @@ const app = new Vue({
             },
         ],
         currentContact: 0,
-        inputMessage:'' 
+        inputMessage:''
 
 
     },
     methods:{
         changeContact: function(i){
             this.currentContact = i;
+        },
+
+        addMessage: function(){
+            this.contacts[this.currentContact].messages.push({
+                date:'10/01/2020 17:35:48', message:this.inputMessage,
+                status:'sent'})
+            this.inputMessage='';
         }
-    }
+    }    
 
 });
 
