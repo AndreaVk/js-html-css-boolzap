@@ -94,10 +94,20 @@ const app = new Vue({
 
         addMessage: function(){
             this.contacts[this.currentContact].messages.push({
-                date:'10/01/2020 17:35:48', message:this.inputMessage,
+                date:'10/01/2020 17:35:48' , message:this.inputMessage,
                 status:'sent'})
             this.inputMessage='';
-        }
+            setTimeout(this.received, 3000);
+        },
+        received: function() {
+            this.contacts[this.currentContact].messages.push(
+                {
+                    date :'10/01/2020 17:35:52' ,
+                    message : 'comunque sei il migliore!! ',
+                    status : 'received',
+                });
+        },
+
     }    
 
 });
