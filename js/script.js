@@ -83,8 +83,8 @@ const app = new Vue({
             },
         ],
         currentContact: 0,
-        inputMessage:''
-
+        inputMessage:'',
+        inputIncludes:''
 
     },
     methods:{
@@ -99,6 +99,8 @@ const app = new Vue({
             this.inputMessage='';
             setTimeout(this.received, 3000);
         },
+        
+        
         received: function() {
             this.contacts[this.currentContact].messages.push(
                 {
@@ -107,8 +109,20 @@ const app = new Vue({
                     status : 'received',
                 });
         },
+        
+        
+        filters:function(i){
+            inputIncludes = this.inputIncludes.toLowerCase();
+            search = this.contacts[i].name.toLowerCase();
+            
+            if(search.includes(inputIncludes)){
+                return true
+            }else{
+                return false
+            }
 
-    }    
+        },
+    },    
 
 });
 
